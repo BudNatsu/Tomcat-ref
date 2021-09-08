@@ -39,7 +39,7 @@ echo "ELASTICSEARCH_HOSTS=$elasticsearch:9200" >> $dc/Tomcat-ref/.env
 read -e -p "Adresse de kibana :" -i "à modifier" kibana 
 echo "KIBANA_HOST=$kibana:5601" >> $dc/Tomcat-ref/.env
 
-read -e -p "Adresse de logstash :" -i "à modifier" kibana 
-echo "LOGSTASH_HOST=$kibana:5044" >> $dc/Tomcat-ref/.env
+read -e -p "Adresse de logstash :" -i "à modifier" logstash 
+echo "LOGSTASH_HOST=$logstash:5044" >> $dc/Tomcat-ref/.env
 
 docker-compose up -d
