@@ -23,7 +23,7 @@ cd $dc
 mkdir log
 sudo chmod 644 log
 
-git clone https://github.com/BudNatsu/Tomcat-ref
+git clone https://github.com/BudNatsu/Tomcat-ref.git
 
 #cp $docker/docker-compose.yml $dc
 #cp $docker/.env $dc
