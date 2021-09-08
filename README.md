@@ -30,3 +30,5 @@ docker run --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-nod
 
 Note si durant le docker-compose, ce message apparaît : networks.elastic value Additional properties are not allowed ('name' was unexpected)
 Pensez à mettre à jour votre docker-compose.
+
+Pour déployer les applications comme tomcat sur différents serveurs, il faut impérativement que le serveur host des tomcats possède filebeat afin qu'il puisse envoyer les logs.
