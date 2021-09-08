@@ -27,3 +27,6 @@ docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=
 
 Elasticsearch : 
 docker run --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.13.4
+
+Note si durant le docker-compose, ce message apparaît : networks.elastic value Additional properties are not allowed ('name' was unexpected)
+Pensez à mettre à jour votre docker-compose.
