@@ -21,6 +21,6 @@ services:
       - "co.elastic.logs/processors.add_fields.fields.abes_middleware=Tomcat-${container_name}"
     volumes:
       - ./sample.war:/usr/local/tomcat/webapps/sample.war
-      - ./log:/usr/local/tomcat/logs/
+      - ./../log:/usr/local/tomcat/logs/
       - ./server.xml:/usr/local/tomcat/conf/server.xml
     
