@@ -15,3 +15,15 @@ git clone https://github.com/BudNatsu/Filebeats.git
 
 Logstash :
 git clone https://github.com/BudNatsu/logstash.git
+
+Si aucun Kibana et elasticsearch n'a été mis en place vous pouvez les mettre en place :
+Attention essayez d'harmoniser les différentes version des produits.
+
+docker network create elastic
+Il est conseillé de créer et d'utiliser un réseau dédié, avec l'option "--net elastic" et de définir ce même réseau dans filebeat et logstash
+
+Kibana :
+docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=elasticsearch:9200" docker.elastic.co/kibana/kibana:7.13.4
+
+Elasticsearch : 
+docker run --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.13.4
