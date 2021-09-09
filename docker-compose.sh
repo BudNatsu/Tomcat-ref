@@ -1,8 +1,7 @@
 #/bin/bash
 
 echo "Lancement du script de création de docker-compose"
-echo "Quel nom souhaitez vous utiliser ?"
-read -e nom
+read -e -p "Quel nom souhaitez vous utiliser ?" -i " Tomcat-" nom
 
 
 read -e -p "Où souhaitez-vous créer ce répertoire ?" -i "à modifier" rep
