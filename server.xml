@@ -166,7 +166,7 @@
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
                
      <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-               prefix="access_web" suffix=".txt" rotatable="true"
+               prefix="localhost_access_log" suffix=".txt" rotatable="true"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
       </Host>
