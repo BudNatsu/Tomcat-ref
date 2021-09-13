@@ -23,6 +23,7 @@ services:
       #- ./../log:/usr/local/tomcat/logs/
       - /opt/pod/${container_name}/log:/usr/local/tomcat/logs/
       - ./server.xml:/usr/local/tomcat/conf/server.xml
+      - ./logging.properties:/usr/local/tomcat/conf/logging.properties
     networks:
       - elastic
 
