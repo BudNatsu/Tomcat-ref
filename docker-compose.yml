@@ -10,7 +10,6 @@ services:
 
     ports:
       - '8080-8100:8080'
-      #Docker n'incremente pas, il prends des ports de manière aléatoire
     labels:
       - "co.elastic.logs/enabled=true"
       #- "co.elastic.logs/module=nginx"
