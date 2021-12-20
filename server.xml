@@ -163,8 +163,8 @@
              Note: The pattern used is equivalent to using pattern="common" -->
 	<Valve className="org.apache.catalina.valves.AccessLogValve" directory="/proc/self/fd"
                prefix="1" suffix="" rotatable="false"
-               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-               
+               pattern="{&quot;remote_host&quot;: &quot;%h&quot;,&quot;timestamp&quot;: &quot;%t&quot;,&quot;remote_user&quot;: &quot;%u&quot;,&quot;user_session_id&quot;: &quot;%S&quot;,&quot;method&quot;: &quot;%m&quot;,&quot;path&quot;: &quot;%U&quot;,&quot;status&quot;: &quot;%s&quot;,&quot;bytes_sent&quot;: &quot;%b&quot;,&quot;protocol&quot;: &quot;%H&quot;,&quot;query&quot;: &quot;%q&quot;,&quot;http_x_forwarded_for&quot;: &quot;%{X-Forwarded-For}i&quot;,&quot;commit_millis&quot;: &quot;%F&quot;,&quot;process_millis&quot;:&quot;%D&quot;,&quot;thread_name&quot;: &quot;%I&quot;}" />              
+	      
      <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log" suffix=".txt" rotatable="true"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
